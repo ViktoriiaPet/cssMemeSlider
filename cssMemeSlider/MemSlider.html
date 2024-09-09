@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MemSlider</title>
+    <link rel="stylesheet" href="MemSlider.css">
 </head>
 <body>
-    <div class="slider">
+    <div class="slider middle">
         <div class="slides">
-            <input type="radio" name="button" id="currenButton">
+            <input type="radio" name="button" id="button0" checked>
             <input type="radio" name="button" id="button1">
             <input type="radio" name="button" id="button2">
             <input type="radio" name="button" id="button3">
 
-            <div class="slide-position"><img src="" alt=""></div>
-            <div class="slide-position"><img src="" alt=""></div>
-            <div class="slide-position"><img src="" alt=""></div>
-            <div class="slide-position"><img src="" alt=""></div>
+            <div class="slide-position change1"><img src="CatForSlider.jpg" alt=""></div>
+            <div class="slide-position"><img src="CatForSlider2.jpg" alt=""></div>
+            <div class="slide-position"><img src="CatForSlider3.jpg" alt=""></div>
+            <div class="slide-position"><img src="CatForSlider4.jpg" alt=""></div>
+        </div>
+        <div class="pagination">
+            <label for="button0" class="bar"></label>
+            <label for="button1" class="bar"></label>
+            <label for="button2" class="bar"></label>
+            <label for="button3" class="bar"></label>
         </div>
     </div>
 </body>
