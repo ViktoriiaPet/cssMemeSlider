@@ -5,6 +5,10 @@ body{
     align-items: center;
     flex-direction: row;
 }
+img{
+    width: 50vh;
+    height: 40vh;
+}
 
 .slider{
     width: 65vh;
@@ -46,20 +50,73 @@ body{
     flex-wrap: nowrap;
     flex-direction: row;
     gap: 1vh;
+    
 }
+/*
 input[name="button"] {
+    display: none;
+}*/
+
+
+
+.visibility1{
+    display: none;
+    color: rgb(0, 0, 0);
+}
+.visibility2{
+    display: none;
+    color: rgb(0, 0, 0);
+}
+.visibility3{
+    display: none;
+    color: rgb(0, 0, 0);
+}
+.visibility4{
+    display: none;
+    color: rgb(0, 0, 0);
+}
+
+#buttonImage1:checked ~ input#buttonDiscr1,
+#buttonImage2:checked ~ input#buttonDiscr2,
+input#buttonImage3:checked ~ input#buttonDescr3,
+input#buttonImage4:checked ~ input#buttonDescr4 {
     display: none;
 }
 
-#button0:checked ~ .change1{
+input#buttonImage1:checked ~ .change1{
     margin-left:0;
 }
-#button1:checked ~ .change1{
-    margin-left: -25%;
+input#buttonImage2:checked ~ .change1{
+    margin-left: -25%;  
 }
-#button2:checked ~ .change1{
+
+input#buttonImage3:checked ~ .change1{
     margin-left:-50%;
 }
-#button3:checked ~ .change1{
+input#buttonImage4:checked ~ .change1{
     margin-left:-75%;
+}
+
+
+
+
+input#buttonDiscr1:checked ~ .visibility1{
+    display:inline-block;
+}
+input#buttonDiscr2:checked ~ .visibility2{
+    display:inline-block;
+}
+
+input#buttonDiscr3:checked ~ .visibility3{
+    display:inline-block;
+}
+input#buttonDiscr4:checked ~ .visibility4{
+    display:inline-block;
+}
+
+#buttonImage1:checked ~ input#buttonDiscr1,
+#buttonImage2:checked ~ input#buttonDiscr2,
+input#buttonImage3:checked ~ input#buttonDescr3,
+input#buttonImage4:checked ~ input#buttonDescr4 {
+    display: none;
 }

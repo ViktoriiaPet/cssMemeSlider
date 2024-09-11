@@ -7,23 +7,38 @@
     <link rel="stylesheet" href="MemSlider.css">
 </head>
 <body>
+    
     <div class="slider middle">
         <div class="slides">
-            <input type="radio" name="button" id="button0" checked>
-            <input type="radio" name="button" id="button1">
-            <input type="radio" name="button" id="button2">
-            <input type="radio" name="button" id="button3">
+            <input type="radio" name="button" id="buttonImage1" checked>
+            <input type="radio" name="button" id="buttonImage2">
+            <input type="radio" name="button" id="buttonImage3">
+            <input type="radio" name="button" id="buttonImage4">
 
-            <div class="slide-position change1"><img src="CatForSlider.jpg" alt=""></div>
-            <div class="slide-position"><img src="CatForSlider2.jpg" alt=""></div>
-            <div class="slide-position"><img src="CatForSlider3.jpg" alt=""></div>
-            <div class="slide-position"><img src="CatForSlider4.jpg" alt=""></div>
+            <div class="slide-position change1" id="image1"><img src="CatForSlider.jpg" alt="">
+            
+            </div>
+            <div class="slide-position" id="image2" ><img src="CatForSlider2.jpg" alt=""></div>
+            <div class="slide-position" id="image3" ><img src="CatForSlider3.jpg" alt=""></div>
+            <div class="slide-position" id="image4" ><img src="CatForSlider4.jpg" alt=""></div>
         </div>
         <div class="pagination">
-            <label for="button0" class="bar"></label>
-            <label for="button1" class="bar"></label>
-            <label for="button2" class="bar"></label>
-            <label for="button3" class="bar"></label>
+            <label for="buttonImage1" class="bar"></label>
+            <label for="buttonImage2" class="bar"></label>
+            <label for="buttonImage3" class="bar"></label>
+            <label for="buttonImage4" class="bar"></label>
+        </div>
+
+        <div class="descriptions">
+        <input type="radio" name="buttonD" id="buttonDiscr1" checked>
+        <input type="radio" name="buttonD" id="buttonDiscr2">
+        <input type="radio" name="buttonD" id="buttonDiscr3">
+        <input type="radio" name="buttonD" id="buttonDiscr4">
+
+        <span class="visibility1" id="descriptionPhoto1">I'm so pretty</span>
+        <span class="visibility2" id="descriptionPhoto2">I'm so pretty</span>
+        <span class="visibility3" id="descriptionPhoto3">Ohohoho</span>
+        <span class="visibility4" id="descriptionPhoto4">I'm a frieng</span>
         </div>
     </div>
 </body>
