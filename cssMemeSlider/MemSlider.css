@@ -52,10 +52,10 @@ img{
     gap: 1vh;
     
 }
-/*
+
 input[name="button"] {
     display: none;
-}*/
+}
 
 
 
@@ -76,47 +76,37 @@ input[name="button"] {
     color: rgb(0, 0, 0);
 }
 
-#buttonImage1:checked ~ input#buttonDiscr1,
-#buttonImage2:checked ~ input#buttonDiscr2,
-input#buttonImage3:checked ~ input#buttonDescr3,
-input#buttonImage4:checked ~ input#buttonDescr4 {
-    display: none;
-}
 
-input#buttonImage1:checked ~ .change1{
+
+input#buttonImage1:checked ~ .slides .change1{
     margin-left:0;
 }
-input#buttonImage2:checked ~ .change1{
+input#buttonImage2:checked ~ .slides .change1{
     margin-left: -25%;  
 }
 
-input#buttonImage3:checked ~ .change1{
+input#buttonImage3:checked ~ .slides .change1{
     margin-left:-50%;
 }
-input#buttonImage4:checked ~ .change1{
+input#buttonImage4:checked ~ .slides .change1{
     margin-left:-75%;
 }
 
 
 
 
-input#buttonDiscr1:checked ~ .visibility1{
+input#buttonImage1:checked ~ .descriptions #descriptionPhoto1{
     display:inline-block;
 }
-input#buttonDiscr2:checked ~ .visibility2{
-    display:inline-block;
-}
-
-input#buttonDiscr3:checked ~ .visibility3{
-    display:inline-block;
-}
-input#buttonDiscr4:checked ~ .visibility4{
+input#buttonImage2:checked ~ .descriptions #descriptionPhoto2{
     display:inline-block;
 }
 
-#buttonImage1:checked ~ input#buttonDiscr1,
-#buttonImage2:checked ~ input#buttonDiscr2,
-input#buttonImage3:checked ~ input#buttonDescr3,
-input#buttonImage4:checked ~ input#buttonDescr4 {
-    display: none;
+input#buttonImage3:checked ~ .descriptions #descriptionPhoto3{
+    display:inline-block;
 }
+input#buttonImage4:checked ~ .descriptions #descriptionPhoto4{
+    display:inline-block;
+}
+
+
