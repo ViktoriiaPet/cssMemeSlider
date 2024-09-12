@@ -11,17 +11,19 @@ img{
 }
 
 .slider{
-    width: 65vh;
-
+    width: 100vh;
     overflow: hidden;
     border: black;
     background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .slides{
     width: 400%;
     display: flex;
-    height: 50vh;
+    height: 45vh;
 }
 .slide-position{
     width: 25%;
@@ -75,37 +77,53 @@ input[name="button"] {
     display: none;
     color: rgb(0, 0, 0);
 }
+.bottom-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vh;
+}
+
+.wrap-for-slide{
+    width: 50vh;
+    height: 45vh;
+    overflow: hidden;
+    padding-top: 5vh;
+}
+.descriptions > span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vh;
+}
 
 
-
-input#buttonImage1:checked ~ .slides .change1{
+input#buttonImage1:checked ~ .wrap-for-slide .slides .change1{
     margin-left:0;
 }
-input#buttonImage2:checked ~ .slides .change1{
+input#buttonImage2:checked ~ .wrap-for-slide .slides .change1{
     margin-left: -25%;  
 }
 
-input#buttonImage3:checked ~ .slides .change1{
+input#buttonImage3:checked ~ .wrap-for-slide .slides .change1{
     margin-left:-50%;
 }
-input#buttonImage4:checked ~ .slides .change1{
+input#buttonImage4:checked ~ .wrap-for-slide .slides .change1{
     margin-left:-75%;
 }
 
 
 
 
-input#buttonImage1:checked ~ .descriptions #descriptionPhoto1{
+input#buttonImage1:checked ~ .bottom-block .descriptions #descriptionPhoto1{
     display:inline-block;
 }
-input#buttonImage2:checked ~ .descriptions #descriptionPhoto2{
+input#buttonImage2:checked ~ .bottom-block .descriptions #descriptionPhoto2{
     display:inline-block;
 }
 
-input#buttonImage3:checked ~ .descriptions #descriptionPhoto3{
+input#buttonImage3:checked ~ .bottom-block .descriptions #descriptionPhoto3{
     display:inline-block;
 }
-input#buttonImage4:checked ~ .descriptions #descriptionPhoto4{
+input#buttonImage4:checked ~ .bottom-block .descriptions #descriptionPhoto4{
     display:inline-block;
 }
 
