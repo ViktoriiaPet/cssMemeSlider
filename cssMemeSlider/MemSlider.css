@@ -59,13 +59,31 @@ img{
     transition: all .5s ease;
     border: 0.2vh solid white;
 }
+
+
 .bar:active{
-    background-color: rgb(14, 11, 8);
+    background-color: rgb(37, 37, 37);
+    transition: all .5s;
 }
 
-.bar:hover.curcle{
-    background-color: rgb(14, 11, 8);
+
+.bar:hover #curcle2{
+    background-color: transparent;
+    border-color: 1vh solid blue;
 }
+.bar:hover #curcle1{
+    background-color: transparent;
+    border-color: 1vh solid blue;
+}.bar:hover #curcle3{
+    background-color: transparent;
+    border-color: 1vh solid blue;
+}.bar:hover #curcle4{
+    background-color: transparent;
+    border-color: 1vh solid blue;
+}
+
+
+
 
 
 .pagination{
@@ -88,22 +106,22 @@ input[name="button"] {
 .visibility1{
     display: none;
     color: rgb(0, 0, 0);
-    transition: all .5s ease;
+    transition: all .5s;
 }
 .visibility2{
     display: none;
     color: rgb(0, 0, 0);
-    transition: all .5s ease;
+    transition: all .5s;
 }
 .visibility3{
     display: none;
     color: rgb(0, 0, 0);
-    transition: all .5s ease;
+    transition: all .5s;
 }
 .visibility4{
     display: none;
     color: rgb(0, 0, 0);
-    transition: all .5s ease;
+    transition: all .5s;
 }
 .bottom-block{
     display: flex;
@@ -122,9 +140,10 @@ input[name="button"] {
 .descriptions > span{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2vh;
+    transition: all .5s;
 }
 .descriptions{
-    transition: all .9s ease;
+    transition: all .5s;
 }
 
 input#buttonImage1:checked ~ .litle-slide .bottom-block .pagination #button1 #curcle1{
@@ -206,6 +225,10 @@ input#buttonImage4:checked ~ .litle-slide .bottom-block .descriptions #descripti
     flex-direction: column;
     align-items: center;
     gap: 3vh;
+}
+#button1:hover #curcle1{
+    background-color: transparent;
+    border-color: blueviolet;
 }
 
 @media (max-width:750px){
