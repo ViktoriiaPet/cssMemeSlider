@@ -6,25 +6,27 @@ body{
     flex-direction: row;
 }
 img{
-    width: 50vh;
-    height: 40vh;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
 }
 
 .slider{
-    width: 150vh;
+    width: 100%;
     overflow: hidden;
     border: black;
     background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    padding: 3vh;
 }
 
 .slides{
     width: 400%;
     display: flex;
     height: 45vh;
+    align-items: center;
 }
 .slide-position{
     width: 25%;
@@ -35,6 +37,18 @@ img{
     height: 100%;
 }
 .bar{
+    width: 1.5vh;
+    height: 1.5vh;
+    cursor: pointer;
+    opacity: .5;
+    border-radius: 2vh;
+    transition: all .5s ease;
+    border: 1vh solid transparent;
+}
+
+
+
+.curcle{
     width: 1vh;
     height: 1vh;
     background-color: rgb(136, 119, 96);
@@ -43,15 +57,14 @@ img{
     border-radius: 2vh;
     border-color: black;
     transition: all .5s ease;
-    border: 1vh solid white;
+    border: 0.2vh solid white;
 }
-.bar:hover{
-    background-color: rgb(39, 33, 26);
+.bar:active{
+    background-color: rgb(14, 11, 8);
 }
 
-.bar:focus{
-    background-color:transparent;
-    border: 0.2vh solid rgb(136, 119, 96);
+.bar:hover.curcle{
+    background-color: rgb(14, 11, 8);
 }
 
 
@@ -75,24 +88,29 @@ input[name="button"] {
 .visibility1{
     display: none;
     color: rgb(0, 0, 0);
+    transition: all .5s ease;
 }
 .visibility2{
     display: none;
     color: rgb(0, 0, 0);
+    transition: all .5s ease;
 }
 .visibility3{
     display: none;
     color: rgb(0, 0, 0);
+    transition: all .5s ease;
 }
 .visibility4{
     display: none;
     color: rgb(0, 0, 0);
+    transition: all .5s ease;
 }
 .bottom-block{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 50vh;
+    flex-direction: row;
 }
 
 .wrap-for-slide{
@@ -105,37 +123,130 @@ input[name="button"] {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2vh;
 }
+.descriptions{
+    transition: all .9s ease;
+}
+
+input#buttonImage1:checked ~ .litle-slide .bottom-block .pagination #button1 #curcle1{
+    background-color:transparent;
+    border: 0.4vh solid rgb(136, 119, 96);
+}
+
+input#buttonImage2:checked ~ .litle-slide .bottom-block .pagination #button2 #curcle2{
+    background-color:transparent;
+    border: 0.4vh solid rgb(136, 119, 96);
+}
+input#buttonImage3:checked ~ .litle-slide .bottom-block .pagination #button3 #curcle3{
+    background-color:transparent;
+    border: 0.4vh solid rgb(136, 119, 96);
+}
+input#buttonImage4:checked ~ .litle-slide .bottom-block .pagination #button4 #curcle4{
+    background-color:transparent;
+    border: 0.4vh solid rgb(136, 119, 96);
+}
 
 
-input#buttonImage1:checked ~ .wrap-for-slide .slides .change1{
+input#buttonImage1:checked ~ .litle-slide .bottom-block .pagination #button1 #curcle1{
+    background-color:transparent;
+    border: 0.4vh solid rgb(136, 119, 96);
+}
+input#buttonImage2:checked ~ .litle-slide .bottom-block .pagination #button2 #curcle2{
+    background-color:transparent;
+    border: 0.4vh solid rgb(136, 119, 96);
+}
+input#buttonImage3:checked ~.litle-slide .bottom-block .pagination #button3 #curcle3{
+    background-color:transparent;
+    border: 0.4vh solid rgb(136, 119, 96);
+}
+input#buttonImage4:checked ~ .litle-slide .bottom-block .pagination #button4 #curcle4{
+    background-color:transparent;
+    border: 0.4vh solid rgb(136, 119, 96);
+}
+
+
+
+
+
+input#buttonImage1:checked ~ .litle-slide .wrap-for-slide .slides .change1{
     margin-left:0;
 }
-input#buttonImage2:checked ~ .wrap-for-slide .slides .change1{
+input#buttonImage2:checked ~ .litle-slide .wrap-for-slide .slides .change1{
     margin-left: -25%;  
 }
 
-input#buttonImage3:checked ~ .wrap-for-slide .slides .change1{
+input#buttonImage3:checked ~ .litle-slide .wrap-for-slide .slides .change1{
     margin-left:-50%;
 }
-input#buttonImage4:checked ~ .wrap-for-slide .slides .change1{
+input#buttonImage4:checked ~ .litle-slide .wrap-for-slide .slides .change1{
     margin-left:-75%;
 }
 
 
 
 
-input#buttonImage1:checked ~ .bottom-block .descriptions #descriptionPhoto1{
+input#buttonImage1:checked ~ .litle-slide .bottom-block .descriptions #descriptionPhoto1{
     display:inline-block;
+    transition: all .5s ease;
 }
-input#buttonImage2:checked ~ .bottom-block .descriptions #descriptionPhoto2{
+input#buttonImage2:checked ~ .litle-slide .bottom-block .descriptions #descriptionPhoto2{
     display:inline-block;
-}
-
-input#buttonImage3:checked ~ .bottom-block .descriptions #descriptionPhoto3{
-    display:inline-block;
-}
-input#buttonImage4:checked ~ .bottom-block .descriptions #descriptionPhoto4{
-    display:inline-block;
+    transition: all .5s ease;
 }
 
+input#buttonImage3:checked ~ .litle-slide .bottom-block .descriptions #descriptionPhoto3{
+    display:inline-block;
+    transition: all .5s ease;
+}
+input#buttonImage4:checked ~ .litle-slide .bottom-block .descriptions #descriptionPhoto4{
+    display:inline-block;
+    transition: all .5s ease;
+} 
+.litle-slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+}
 
+@media (max-width:750px){
+    .wrap-for-slide{
+        width: 35vh;
+        height: 40vh;
+    }
+    img {
+        width: 100%;
+        height: 100%;}
+
+    .bottom-block{
+        width: 35vh;
+    }
+}
+
+@media (max-width:550px) {
+
+    .bottom-block{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50vh;
+        flex-direction: column;
+        gap: 3vh;
+        padding-top: 3vh;
+    }
+    .wrap-for-slide{
+        width: 30vh;
+        height: 35vh;
+    }
+    img {
+        width: 100%;
+        height: 100%;}
+
+    .slider{
+        padding: 3vh;
+    }
+    .litle-slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+}
